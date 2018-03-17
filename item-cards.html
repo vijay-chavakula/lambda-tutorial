@@ -1,0 +1,38 @@
+<div>
+	<md-card ng-repeat="item in items">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{item.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+		  <div layout="row">
+		  <img ng-src="{{item.imageurl}}" class="md-card-image1" > </img>
+		  </div>
+		  <div layout="row">
+          <table flex>
+			<tr>
+				<td>Item:</td><td>{{item.name}}</td>
+			</tr>
+			<tr>
+				<td>Brand:</td><td>{{item.brand}}</td>
+			</tr>
+			<tr>
+				<td>Category:</td><td>{{item.category}}</td>
+			</tr>
+			<tr>
+				<td>Price:</td><td>{{item.price}}</td>
+			</tr>
+		  </table>
+		  </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+		  <md-button class="md-icon-button" aria-label="Comment">
+			<md-icon md-svg-icon="./images/favourite.svg"></md-icon>
+		  </md-button>
+		  <md-button class="md-icon-button" aria-label="Comment">
+			<md-icon md-svg-icon="./images/addtocart.svg"></md-icon>
+		  </md-button>
+		</md-card-actions>
+	</md-card>
+</div>

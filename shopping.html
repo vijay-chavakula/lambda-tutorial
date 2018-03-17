@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="./css/lib/angular-material.min.css"></link>
+<link href="./css/app.css" rel="stylesheet"></link>
+<!--<link rel="stylesheet" href="./css/lib/ui-grid.min.css" type="text/css">-->
+<link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css" type="text/css">
+<base href="./"></base>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimal-ui" />
+
+</head>
+<body class="" ng-app="ShoppingApp">
+
+<script src="./js/lib/angular.min.js"></script>
+<script src="./js/lib/angular-animate.min.js"></script>
+<script src="./js/lib/angular-aria.min.js"></script>
+<script src="./js/lib/angular-material.min.js"></script>
+<!--<script src="./js/lib/ui-grid.min.js"></script>
+<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>-->
+<script type="text/javascript" src="./js/shopapp.js"></script>
+
+
+	<div ng-controller="AppCtrl" class="carddemoInCardActions" layout="column">
+
+		<md-toolbar class="md-hue-2">
+      		<div class="md-toolbar-tools" >
+      		<div layout="row" ng-click="showHome()" 
+			hide-xs hide-gt-xs hide-sm hide-gt-sm show-md show-gt-md show-lg show-gt-lg show-xl>
+          	<img src="./images/DBS_logo.png" width=120 height=40></img>
+          	</div>
+          	<div layout="row" ng-click="showHome()" 
+			hide-md hide-gt-md hide-lg hide-gt-lg hide-xl>
+          	<img src="./images/DBS_logo.png" width=60 height=30></img>
+          	</div>
+
+          	<md-button class="md-icon-button" aria-label="Avatar" hide-xs hide-gt-xs show-sm show-gt-sm 
+        	show-md show-gt-md show-lg show-gt-lg show-xl>
+	          <md-icon md-svg-icon="./images/account_box.svg" class="fav-ico-black" ng-click="showHome()">
+	          </md-icon>
+	        </md-button>
+
+        	<h2 flex md-truncate class="md-display-1" style="position:relative;left:20px;">
+        	 Welcome Mr.Vijay
+        	</h2>
+
+        	<svg  height="80" style="width:120px" hide-xs hide-gt-xs show-sm show-gt-sm show-md show-gt-md show-lg show-gt-lg show-xl>
+  			<rect x="50" y="20" rx="20" ry="20" width="50" height="40" 
+  				style="fill:red;stroke:black;stroke-width:5;opacity:0.5" ></rect>
+			<text x="65" y="45" fill="black" text-align="center">{{points}}</text>
+			</svg>
+
+			<svg  height="50" style="width:60px" hide-md hide-gt-md hide-lg hide-gt-lg hide-gt-sm hide-xl hide-sm>
+  			<rect x="28" y="5" rx="10" ry="10" width="25" height="40" 
+  				style="fill:red;stroke:black;stroke-width:5;opacity:0.5;font-size:10px !important;" ></rect>
+			<text x="30" y="35" fill="black" text-align="center">{{points}}</text>
+			</svg>
+
+	        <md-button class="md-icon-button" aria-label="Alert">
+	          <md-icon md-svg-icon="./images/bell.svg" style="color: greenyellow;"></md-icon>
+	        </md-button>
+			 <md-button class="md-icon-button" aria-label="Menu">
+	          <md-icon md-svg-icon="./images/menu.svg" style="color: greenyellow;"></md-icon>
+	        </md-button>
+            </div>
+    	</md-toolbar>
+
+      	<div layout="row" layout-align="center center" >
+      		<md-input-container class="md-block md-icon-left" flex=70 md-no-float>
+    			<md-icon md-svg-src="./images/search.svg" aria-label="search"></md-icon>
+    			<!--<label>Search</label>-->
+    			<input
+        			type="text" name="search"
+        			ng-required="false" placeholder="search..."></input>
+	   		</md-input-container>
+	   	</div>
+	   		
+	   	<div layout="column" layout-align="center center" flex>
+	   		<md-card class="  textCenter" >
+                <ng-include src=" 'item-cards.html' " ></ng-include>
+				<!--<ng-include src=" 'lex1.html' "  ng-if="tabVal=='bot'"></ng-include>-->
+	   		</md-card>
+	   	</div>
+		
+	</div>
+</body>
+</html>
